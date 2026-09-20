@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orrery — space reference library</title>
+<meta name="description" content="A searchable reading room for scanned space and astronomy reference books.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23101319'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23E9E3D2'/%3E%3Cellipse cx='16' cy='16' rx='12' ry='5' fill='none' stroke='%237FA8E8' stroke-width='1.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#reader">Skip to the reading pane</a>
+
+<header class="topbar">
+  <button class="iconbtn rail-toggle" id="railToggle" aria-expanded="false" aria-controls="rail">Entries</button>
+  <a class="wordmark" href="#/" aria-label="Orrery home">
+    <svg viewBox="0 0 34 24" aria-hidden="true" focusable="false"><ellipse cx="17" cy="12" rx="15" ry="6"/><circle cx="17" cy="12" r="3.4" class="sun"/><circle cx="32" cy="12" r="1.9" class="planet"/></svg>
+    <span>Orrery</span>
+  </a>
+  <form class="find" id="findForm" role="search">
+    <input id="q" type="search" autocomplete="off" spellcheck="false"
+           placeholder="Search entries and full text" aria-label="Search the library">
+    <button type="submit" class="iconbtn">Search</button>
+  </form>
+  <button class="iconbtn" id="themeBtn" aria-label="Switch to dark reading">Dark</button>
+</header>
+
+<div class="shell">
+  <nav class="rail" id="rail" aria-label="Entry index">
+    <div class="rail-head">
+      <label class="field">
+        <span>Book</span>
+        <select id="bookSelect"></select>
+      </label>
+      <label class="field">
+        <span>Filter entries</span>
+        <input id="filter" type="search" autocomplete="off" placeholder="Start typing a title">
+      </label>
+      <div class="alphabet" id="alphabet" role="group" aria-label="Jump to letter"></div>
+      <p class="rail-count" id="railCount"></p>
+    </div>
+    <ol class="entries" id="entries"></ol>
+  </nav>
+
+  <main id="reader" class="reader" tabindex="-1">
+    <div id="view"></div>
+  </main>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
