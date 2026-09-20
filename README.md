@@ -1,4 +1,4 @@
-# Orrery — a static encyclopedia site for scanned space books
+# Orrery - a static encyclopedia site for scanned space books
 
 A GitHub Pages site that turns plain-text scans of reference books into a
 browsable, searchable encyclopedia. It ships with the *Encyclopedia of Astronomy
