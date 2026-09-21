@@ -1,0 +1,22 @@
+{
+  "site": {
+    "title": "Orrery",
+    "tagline": "A reading room for space reference books"
+  },
+  "books": [
+    {
+      "id": "astronomy-astrophysics",
+      "title": "Encyclopedia of Astronomy and Astrophysics",
+      "subtitle": "Four volumes, scanned text",
+      "author": "Nature Publishing Group / Institute of Physics Publishing",
+      "year": "2001",
+      "file": "encyclopedia-of-astronomy-and-astrophysics.txt",
+      "profile": "running-header",
+      "options": {
+        "header": "ENCYCLOPEDIA OF ASTRONOMY (?:AND|&) ASTROPHYSICS",
+        "footer": "Copyright\\s*©.*Nature Publishing|Brunel Road, Houndmills|^and Institute of Physics Publishing|Dirac House, Temple Back"
+      },
+      "min_words": 12
+    }
+  ]
+}
