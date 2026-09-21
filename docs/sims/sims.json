@@ -7,11 +7,26 @@
       "explain": "The twelve shaded sectors each take the same time to cross, so they all have the same area: thin and long far from the Sun, short and wide close in. Make the orbit bigger and watch the period in the readout grow as the orbit size to the power 3/2. Speed comes from the vis-viva equation for the Sun's gravity.",
       "script": "kepler-orbits.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "kepler-s-laws" },
-        { "book": "astronomy-astrophysics", "entry": "orbit" },
-        { "book": "astronomy-astrophysics", "entry": "orbital-elements" },
-        { "book": "astronomy-astrophysics", "entry": "ellipse" },
-        { "book": "astronomy-astrophysics", "entry": "kepler" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "kepler-s-laws"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "orbit"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "orbital-elements"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "ellipse"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "kepler"
+        }
       ]
     },
     {
@@ -21,10 +36,22 @@
       "explain": "The deeper dip happens when the star with the higher surface brightness is covered, which is why the two eclipses differ in depth. Tilt the orbit away from edge-on and the eclipses become partial, then vanish. The stars are drawn as uniform discs, with sizes in units of the larger star's radius and a separation of 3.4 radii.",
       "script": "eclipsing-binary.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "eclipsing-binary-stars" },
-        { "book": "astronomy-astrophysics", "entry": "binary-stars-overview" },
-        { "book": "astronomy-astrophysics", "entry": "close-binary-stars" },
-        { "book": "astronomy-astrophysics", "entry": "inclination" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "eclipsing-binary-stars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "binary-stars-overview"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "close-binary-stars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "inclination"
+        }
       ]
     },
     {
@@ -34,11 +61,26 @@
       "explain": "The spectrum is Planck's black-body curve, scaled to its own peak, with the visible band shown in colour. Luminosity follows L = R² T⁴ in solar units. The main-sequence band is an approximation drawn from typical stars of each spectral class, so the 'where it sits' label is a guide rather than a classification.",
       "script": "star-colour.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "hertzsprung-russell-diagram" },
-        { "book": "astronomy-astrophysics", "entry": "black-body-radiation" },
-        { "book": "astronomy-astrophysics", "entry": "classification-of-stellar-spectra" },
-        { "book": "astronomy-astrophysics", "entry": "effective-temperature-scale-and-bolometric-corrections" },
-        { "book": "astronomy-astrophysics", "entry": "stellar-evolution" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "hertzsprung-russell-diagram"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "black-body-radiation"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "classification-of-stellar-spectra"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "effective-temperature-scale-and-bolometric-corrections"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "stellar-evolution"
+        }
       ]
     },
     {
@@ -48,11 +90,26 @@
       "explain": "The upper panel shows why: waves ahead of a moving source are bunched together and those behind are spread out. The spectra use the relativistic Doppler formula, so at large speeds the shift is no longer simply proportional to speed. Lines are hydrogen's Balmer series with calcium H and K, magnesium and sodium D.",
       "script": "doppler-lines.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "doppler-effect" },
-        { "book": "astronomy-astrophysics", "entry": "redshift" },
-        { "book": "astronomy-astrophysics", "entry": "hydrogen-spectrum" },
-        { "book": "astronomy-astrophysics", "entry": "radial-velocities" },
-        { "book": "astronomy-astrophysics", "entry": "spectroscopic-binary-stars" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "doppler-effect"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "redshift"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "hydrogen-spectrum"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "radial-velocities"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "spectroscopic-binary-stars"
+        }
       ]
     },
     {
@@ -62,10 +119,22 @@
       "explain": "Click any galaxy to stand on it. The view recentres, the arrows redraw, and the graph is the same straight line: no galaxy is the centre of the expansion. The Hubble time, one over the Hubble constant, is a rough age for a universe that has always expanded at today's rate.",
       "script": "hubble-expansion.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "hubble-law" },
-        { "book": "astronomy-astrophysics", "entry": "hubble-constant" },
-        { "book": "astronomy-astrophysics", "entry": "hubble-diagram" },
-        { "book": "astronomy-astrophysics", "entry": "expanding-universe" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "hubble-law"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "hubble-constant"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "hubble-diagram"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "expanding-universe"
+        }
       ]
     },
     {
@@ -75,9 +144,18 @@
       "explain": "Every pixel is traced back through the lens equation for a point mass. Drag the background galaxy until it sits behind the lens and the arcs close into a ring. The graph shows how much a point source brightens as it passes behind the lens, the signal microlensing surveys look for; the closer the passage, the higher the peak.",
       "script": "gravitational-lens.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "gravitational-lensing" },
-        { "book": "astronomy-astrophysics", "entry": "microlensing" },
-        { "book": "astronomy-astrophysics", "entry": "gravitational-lensing-by-clusters-of-galaxies" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "gravitational-lensing"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "microlensing"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "gravitational-lensing-by-clusters-of-galaxies"
+        }
       ]
     },
     {
@@ -87,9 +165,18 @@
       "explain": "The depth is close to the square of the planet-to-star size ratio, which is why an Earth crossing the Sun dims it by less than a hundredth of a percent while the same planet around a small red dwarf is far easier to spot. Limb darkening makes the star's edge fainter and rounds the bottom of the dip; a grazing path gives a V shape.",
       "script": "exoplanet-transit.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "extrasolar-planets" },
-        { "book": "astronomy-astrophysics", "entry": "transit" },
-        { "book": "astronomy-astrophysics", "entry": "extrasolar-planetary-companions-and-brown-dwarfs" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "extrasolar-planets"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "transit"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "extrasolar-planetary-companions-and-brown-dwarfs"
+        }
       ]
     },
     {
@@ -99,10 +186,22 @@
       "explain": "The view rotates with the two bodies, so they stay still. Contours show the effective potential; red ones pass through L1, L2 and L3 and mark the Roche lobes. Particles are integrated with the full equations of the restricted three-body problem, including the Coriolis force. L4 and L5 hold particles only while the smaller body has under about 3.85% of the total mass.",
       "script": "lagrange-points.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "lagrangian-points" },
-        { "book": "astronomy-astrophysics", "entry": "three-body-problem" },
-        { "book": "astronomy-astrophysics", "entry": "roche-lobe" },
-        { "book": "astronomy-astrophysics", "entry": "roche-limit" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "lagrangian-points"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "three-body-problem"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "roche-lobe"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "roche-limit"
+        }
       ]
     },
     {
@@ -112,11 +211,26 @@
       "explain": "The dashed line is our line of sight. When Earth overtakes an outer planet, that line swings backwards for a few weeks and the planet drifts west among the stars. Orbits are circles tilted by each planet's real inclination, starting from their positions today, and the small tilt turns the reversal into a loop or a zigzag.",
       "script": "retrograde-motion.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "retrograde-motion" },
-        { "book": "astronomy-astrophysics", "entry": "mars" },
-        { "book": "astronomy-astrophysics", "entry": "ptolemaic-system" },
-        { "book": "astronomy-astrophysics", "entry": "planetary-theory-from-eudoxus-to-copernicus" },
-        { "book": "astronomy-astrophysics", "entry": "nicolaus-copernicus" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "retrograde-motion"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "mars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "ptolemaic-system"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "planetary-theory-from-eudoxus-to-copernicus"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "nicolaus-copernicus"
+        }
       ]
     },
     {
@@ -126,10 +240,228 @@
       "explain": "The points are simulated measurements with error bars. With the halo at zero, the model curve from the stars falls away beyond about 10 kpc while the points stay flat. Raise the halo until the curve runs through them. The disc uses Freeman's formula for an exponential disc; the halo is a pseudo-isothermal sphere.",
       "script": "rotation-curve.js",
       "articles": [
-        { "book": "astronomy-astrophysics", "entry": "dark-matter-in-galaxies" },
-        { "book": "astronomy-astrophysics", "entry": "dark-matter-its-nature" },
-        { "book": "astronomy-astrophysics", "entry": "spiral-galaxy" },
-        { "book": "astronomy-astrophysics", "entry": "differential-rotation" }
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "dark-matter-in-galaxies"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "dark-matter-its-nature"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "spiral-galaxy"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "differential-rotation"
+        }
+      ]
+    },
+    {
+      "id": "moon-phases",
+      "title": "Phases of the Moon",
+      "summary": "Half the Moon is always sunlit; the phase is how much of that half faces us.",
+      "explain": "The top-down view keeps the Sun off to the left, so the Moon's lit half always faces left. The red arc marks the half that faces Earth, and the overlap between the two is the phase you see on the right. Rising and setting times are approximate: the Moon rises about 50 minutes later each day.",
+      "script": "moon-phases.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "phases-of-the-moon"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "moon"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "phase"
+        }
+      ]
+    },
+    {
+      "id": "tides",
+      "title": "Tides, spring and neap",
+      "summary": "The Moon and Sun each stretch the oceans into two bulges; how they line up sets the size of the tides.",
+      "explain": "The bulges are exaggerated hugely. Heights are the open-ocean 'equilibrium' tide, about 27 cm from the Moon and 12 cm from the Sun; coastlines and ocean basins amplify real tides to metres. Turn off the Moon or the Sun to see each one's share, and watch the tide-gauge record swell and shrink over the lunar month.",
+      "script": "tides.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "tides"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "moon"
+        }
+      ]
+    },
+    {
+      "id": "eclipses",
+      "title": "Total and annular solar eclipses",
+      "summary": "The Moon and Sun look almost the same size, so a small change in the Moon's distance decides whether an eclipse is total or annular.",
+      "explain": "The side view is not to scale, but the tip of the Moon's dark shadow cone lands in the right place relative to the ground: past it for a total eclipse, short of it for an annular one. Path widths are for the shadow falling straight down; on a real, curved Earth they are usually wider.",
+      "script": "eclipses.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "eclipse"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "moon"
+        }
+      ]
+    },
+    {
+      "id": "seasons",
+      "title": "Seasons and the tilt of Earth's axis",
+      "summary": "Seasons come from the tilt of Earth's axis, not from its distance to the Sun.",
+      "explain": "Earth's axis keeps pointing the same way as it orbits, so each hemisphere leans sunward for half the year. The right panel traces the Sun across your sky on the chosen date, with the solstice paths dashed for comparison. Set the tilt to zero and the seasons disappear. Earth is actually closest to the Sun in early January.",
+      "script": "seasons.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "season"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "obliquity-of-the-ecliptic"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "ecliptic"
+        }
+      ]
+    },
+    {
+      "id": "stellar-parallax",
+      "title": "Stellar parallax",
+      "summary": "As Earth orbits the Sun, a nearby star traces a tiny ellipse against more distant stars; its size gives the star's distance.",
+      "explain": "The parallax angle in arcseconds is one over the distance in parsecs, the unit defined by this very measurement. The telescope view rescales itself so the ellipse always fits, and the bar shows its true angular size. Stars near the plane of Earth's orbit shuffle back and forth in a line; stars far above it trace near-circles.",
+      "script": "stellar-parallax.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "parallaxes"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "universal-distance-scale"
+        }
+      ]
+    },
+    {
+      "id": "newtons-cannon",
+      "title": "Newton's cannon: orbits and escape",
+      "summary": "Fire a shell sideways fast enough and the ground curves away as fast as it falls: an orbit.",
+      "explain": "This is Newton's own thought experiment, integrated step by step under Earth's gravity with no air. Below the circular speed the shell falls back; between circular and escape speed it follows an ellipse; above escape speed it never returns. Raise the cannon and both speeds drop, which is why higher orbits are slower.",
+      "script": "newtons-cannon.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "escape-velocity"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "newton-s-laws-of-motion"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "newton"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "orbit"
+        }
+      ]
+    },
+    {
+      "id": "pulsar-lighthouse",
+      "title": "Pulsars: cosmic lighthouses",
+      "summary": "A spinning neutron star sweeps two radio beams across the sky; we see a pulse each time one crosses Earth.",
+      "explain": "The beams follow the magnetic axis, tilted from the spin axis. If our line of sight passes through a beam's path we see one pulse per turn, two if it passes through both, and none if it misses. The animation is slowed by the factor shown; a real millisecond pulsar turns hundreds of times a second, its equator moving at a noticeable fraction of the speed of light.",
+      "script": "pulsar-lighthouse.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "pulsars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "neutron-stars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "crab-pulsar"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "vela-pulsar"
+        }
+      ]
+    },
+    {
+      "id": "radial-velocity",
+      "title": "Finding planets by the wobble of their stars",
+      "summary": "A planet tugs its star around their shared centre of mass; the star's Doppler shift reveals the planet.",
+      "explain": "The curve's height is the star's wobble speed, which grows with the planet's mass and shrinks with its period. Eccentric orbits give lopsided curves. The dots are simulated measurements with 1 m/s scatter, about what the best spectrographs achieve, which is why a Jupiter is easy to find this way and an Earth around a Sun-like star is not yet. The method gives a minimum mass, because the tilt of the orbit is unknown.",
+      "script": "radial-velocity.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "radial-velocities"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "barycenter"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "extrasolar-planets"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "spectroscopic-binary-stars"
+        }
+      ]
+    },
+    {
+      "id": "cepheid-distance",
+      "title": "Cepheid variables as cosmic yardsticks",
+      "summary": "A Cepheid's pulsation period reveals its true brightness; comparing that with how bright it looks gives its distance.",
+      "explain": "Leavitt's law links the period to absolute magnitude (here the V-band relation of Benedict and colleagues, 2007). Subtracting absolute from apparent magnitude gives the distance modulus, and from that the distance. This is how Hubble proved in 1924 that the Andromeda 'nebula' is a separate galaxy. The animation is sped up; dust, which dims real Cepheids, is left out.",
+      "script": "cepheid-distance.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "cepheid-period-luminosity-relation"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "magnitude-scales-and-photometric-systems"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "universal-distance-scale"
+        }
+      ]
+    },
+    {
+      "id": "galaxy-collision",
+      "title": "Colliding galaxies and tidal tails",
+      "summary": "Two disc galaxies swing past each other and pull long tails of stars out of each other.",
+      "explain": "A version of Toomre and Toomre's 1972 experiment: each galaxy is a heavy core with a disc of massless stars, and the cores follow a parabolic orbit. Discs spinning the same way as the encounter are torn into long tails and bridges; switch one to spin the other way and it barely changes. Real mergers also involve dark-matter halos that eventually pull the pair together, which this model leaves out.",
+      "script": "galaxy-collision.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "interacting-galaxies"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "galaxies-interactions-and-mergers"
+        }
       ]
     }
   ]
