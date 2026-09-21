@@ -1,0 +1,136 @@
+{
+  "sims": [
+    {
+      "id": "kepler-orbits",
+      "title": "Kepler's laws of planetary motion",
+      "summary": "An ellipse with the Sun at one focus, equal areas swept in equal times, and a period that grows with the size of the orbit.",
+      "explain": "The twelve shaded sectors each take the same time to cross, so they all have the same area: thin and long far from the Sun, short and wide close in. Make the orbit bigger and watch the period in the readout grow as the orbit size to the power 3/2. Speed comes from the vis-viva equation for the Sun's gravity.",
+      "script": "kepler-orbits.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "kepler-s-laws" },
+        { "book": "astronomy-astrophysics", "entry": "orbit" },
+        { "book": "astronomy-astrophysics", "entry": "orbital-elements" },
+        { "book": "astronomy-astrophysics", "entry": "ellipse" },
+        { "book": "astronomy-astrophysics", "entry": "kepler" }
+      ]
+    },
+    {
+      "id": "eclipsing-binary",
+      "title": "Eclipsing binary light curve",
+      "summary": "Two stars in orbit pass in front of each other, and their combined light dips twice per orbit.",
+      "explain": "The deeper dip happens when the star with the higher surface brightness is covered, which is why the two eclipses differ in depth. Tilt the orbit away from edge-on and the eclipses become partial, then vanish. The stars are drawn as uniform discs, with sizes in units of the larger star's radius and a separation of 3.4 radii.",
+      "script": "eclipsing-binary.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "eclipsing-binary-stars" },
+        { "book": "astronomy-astrophysics", "entry": "binary-stars-overview" },
+        { "book": "astronomy-astrophysics", "entry": "close-binary-stars" },
+        { "book": "astronomy-astrophysics", "entry": "inclination" }
+      ]
+    },
+    {
+      "id": "star-colour",
+      "title": "Star colour, temperature and the HR diagram",
+      "summary": "A star's temperature sets its colour and spectrum; temperature and size together set its luminosity and its place on the Hertzsprung–Russell diagram.",
+      "explain": "The spectrum is Planck's black-body curve, scaled to its own peak, with the visible band shown in colour. Luminosity follows L = R² T⁴ in solar units. The main-sequence band is an approximation drawn from typical stars of each spectral class, so the 'where it sits' label is a guide rather than a classification.",
+      "script": "star-colour.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "hertzsprung-russell-diagram" },
+        { "book": "astronomy-astrophysics", "entry": "black-body-radiation" },
+        { "book": "astronomy-astrophysics", "entry": "classification-of-stellar-spectra" },
+        { "book": "astronomy-astrophysics", "entry": "effective-temperature-scale-and-bolometric-corrections" },
+        { "book": "astronomy-astrophysics", "entry": "stellar-evolution" }
+      ]
+    },
+    {
+      "id": "doppler-lines",
+      "title": "Doppler shift of spectral lines",
+      "summary": "Motion along the line of sight stretches or squeezes light waves, sliding every absorption line in a spectrum by the same factor.",
+      "explain": "The upper panel shows why: waves ahead of a moving source are bunched together and those behind are spread out. The spectra use the relativistic Doppler formula, so at large speeds the shift is no longer simply proportional to speed. Lines are hydrogen's Balmer series with calcium H and K, magnesium and sodium D.",
+      "script": "doppler-lines.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "doppler-effect" },
+        { "book": "astronomy-astrophysics", "entry": "redshift" },
+        { "book": "astronomy-astrophysics", "entry": "hydrogen-spectrum" },
+        { "book": "astronomy-astrophysics", "entry": "radial-velocities" },
+        { "book": "astronomy-astrophysics", "entry": "spectroscopic-binary-stars" }
+      ]
+    },
+    {
+      "id": "hubble-expansion",
+      "title": "Hubble's law and the expanding universe",
+      "summary": "Space stretches uniformly, so every galaxy sees all the others receding at speeds proportional to their distance.",
+      "explain": "Click any galaxy to stand on it. The view recentres, the arrows redraw, and the graph is the same straight line: no galaxy is the centre of the expansion. The Hubble time, one over the Hubble constant, is a rough age for a universe that has always expanded at today's rate.",
+      "script": "hubble-expansion.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "hubble-law" },
+        { "book": "astronomy-astrophysics", "entry": "hubble-constant" },
+        { "book": "astronomy-astrophysics", "entry": "hubble-diagram" },
+        { "book": "astronomy-astrophysics", "entry": "expanding-universe" }
+      ]
+    },
+    {
+      "id": "gravitational-lens",
+      "title": "Gravitational lensing and microlensing",
+      "summary": "A foreground mass bends light from a galaxy behind it into arcs, double images, or a complete Einstein ring.",
+      "explain": "Every pixel is traced back through the lens equation for a point mass. Drag the background galaxy until it sits behind the lens and the arcs close into a ring. The graph shows how much a point source brightens as it passes behind the lens, the signal microlensing surveys look for; the closer the passage, the higher the peak.",
+      "script": "gravitational-lens.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "gravitational-lensing" },
+        { "book": "astronomy-astrophysics", "entry": "microlensing" },
+        { "book": "astronomy-astrophysics", "entry": "gravitational-lensing-by-clusters-of-galaxies" }
+      ]
+    },
+    {
+      "id": "exoplanet-transit",
+      "title": "Exoplanet transits",
+      "summary": "A planet crossing its star blocks a sliver of light; the depth of the dip reveals the planet's size.",
+      "explain": "The depth is close to the square of the planet-to-star size ratio, which is why an Earth crossing the Sun dims it by less than a hundredth of a percent while the same planet around a small red dwarf is far easier to spot. Limb darkening makes the star's edge fainter and rounds the bottom of the dip; a grazing path gives a V shape.",
+      "script": "exoplanet-transit.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "extrasolar-planets" },
+        { "book": "astronomy-astrophysics", "entry": "transit" },
+        { "book": "astronomy-astrophysics", "entry": "extrasolar-planetary-companions-and-brown-dwarfs" }
+      ]
+    },
+    {
+      "id": "lagrange-points",
+      "title": "Lagrange points and the three-body problem",
+      "summary": "Five places around two orbiting bodies where a small object can keep pace with them, and what happens when you nudge it.",
+      "explain": "The view rotates with the two bodies, so they stay still. Contours show the effective potential; red ones pass through L1, L2 and L3 and mark the Roche lobes. Particles are integrated with the full equations of the restricted three-body problem, including the Coriolis force. L4 and L5 hold particles only while the smaller body has under about 3.85% of the total mass.",
+      "script": "lagrange-points.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "lagrangian-points" },
+        { "book": "astronomy-astrophysics", "entry": "three-body-problem" },
+        { "book": "astronomy-astrophysics", "entry": "roche-lobe" },
+        { "book": "astronomy-astrophysics", "entry": "roche-limit" }
+      ]
+    },
+    {
+      "id": "retrograde-motion",
+      "title": "Retrograde motion of the planets",
+      "summary": "Why the planets sometimes seem to reverse course against the stars, and why the loops are not all the same shape.",
+      "explain": "The dashed line is our line of sight. When Earth overtakes an outer planet, that line swings backwards for a few weeks and the planet drifts west among the stars. Orbits are circles tilted by each planet's real inclination, starting from their positions today, and the small tilt turns the reversal into a loop or a zigzag.",
+      "script": "retrograde-motion.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "retrograde-motion" },
+        { "book": "astronomy-astrophysics", "entry": "mars" },
+        { "book": "astronomy-astrophysics", "entry": "ptolemaic-system" },
+        { "book": "astronomy-astrophysics", "entry": "planetary-theory-from-eudoxus-to-copernicus" },
+        { "book": "astronomy-astrophysics", "entry": "nicolaus-copernicus" }
+      ]
+    },
+    {
+      "id": "rotation-curve",
+      "title": "Galaxy rotation curves and dark matter",
+      "summary": "Stars far from a galaxy's centre orbit too fast for the visible matter alone; a dark-matter halo makes up the difference.",
+      "explain": "The points are simulated measurements with error bars. With the halo at zero, the model curve from the stars falls away beyond about 10 kpc while the points stay flat. Raise the halo until the curve runs through them. The disc uses Freeman's formula for an exponential disc; the halo is a pseudo-isothermal sphere.",
+      "script": "rotation-curve.js",
+      "articles": [
+        { "book": "astronomy-astrophysics", "entry": "dark-matter-in-galaxies" },
+        { "book": "astronomy-astrophysics", "entry": "dark-matter-its-nature" },
+        { "book": "astronomy-astrophysics", "entry": "spiral-galaxy" },
+        { "book": "astronomy-astrophysics", "entry": "differential-rotation" }
+      ]
+    }
+  ]
+}

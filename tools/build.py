@@ -384,6 +384,8 @@ def add_book(args):
         print(f"copied into sources/{filename}")
     title = args.title or os.path.splitext(filename)[0].replace("_", " ")
     book_id = args.id or slugify(title)
+    if book_id in RESERVED_IDS:
+        raise SystemExit(f"'{book_id}' is reserved by the site; pass --id something-else")
     if any(b["id"] == book_id for b in reg["books"]):
         raise SystemExit(f"book id '{book_id}' is already registered")
     book = {
@@ -400,6 +402,35 @@ def add_book(args):
     save_registry(reg)
     print(f"registered '{title}' as {book_id}")
     return book_id
+
+
+RESERVED_IDS = {"search", "sims"}
+
+
+def check_sims(manifest):
+    """Warn about simulations that link to entries which do not exist."""
+    path = os.path.join(ROOT, "docs", "sims", "sims.json")
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        sims = json.load(f).get("sims", [])
+    ids = {}
+    for book in manifest["books"]:
+        idx_path = os.path.join(DATA, book["id"], "index.json")
+        with open(idx_path, encoding="utf-8") as f:
+            ids[book["id"]] = {row[0] for row in json.load(f)["entries"]}
+    broken = 0
+    for sim in sims:
+        script = os.path.join(ROOT, "docs", "sims", sim.get("script", ""))
+        if not os.path.exists(script):
+            print(f"  ! simulation '{sim['id']}': missing script {sim.get('script')}")
+            broken += 1
+        for link in sim.get("articles", []):
+            if link["entry"] not in ids.get(link["book"], ()):
+                print(f"  ! simulation '{sim['id']}' links to missing entry {link['book']}/{link['entry']}")
+                broken += 1
+    total = sum(len(s_.get("articles", [])) for s_ in sims)
+    print(f"simulations: {len(sims)}, article links: {total}, broken: {broken}")
 
 
 def main():
@@ -449,6 +480,7 @@ def main():
     with open(manifest_path, "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, separators=(",", ":"))
     print(f"\ndone — {len(manifest['books'])} book(s) in docs/data/")
+    check_sims(manifest)
 
 
 if __name__ == "__main__":

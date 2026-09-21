@@ -36,6 +36,9 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
     terms: [],
     resultSel: -1,
     results: [],
+    sims: null,           // sims/sims.json
+    simScripts: new Map(),
+    simKit: null,         // the running simulation, disposed on navigation
   };
 
   /* ------------------------------------------------------------ utilities */
@@ -328,6 +331,11 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
               </span>
             </a>`).join("")}
         </div>
+        ${state.sims && state.sims.length ? `
+        <a class="sim-callout" href="#/sims">
+          <strong>${num(state.sims.length)} interactive simulations</strong>
+          <span>${state.sims.slice(0, 4).map((x) => esc(x.title)).join(", ")}, and more, each linked to the entries that explain them.</span>
+        </a>` : ""}
         <p class="note">Add another scanned book by dropping its text file in
         <code>sources/</code> and running <code>python3 tools/build.py --add</code>.
         The shelf, the index and the search take it from there.</p>
@@ -355,6 +363,7 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
         <div class="actions">
           <button type="button" class="iconbtn" id="randomBtn">Open a random entry</button>
           <button type="button" class="iconbtn" id="firstBtn">Start at the beginning</button>
+          ${state.sims && state.sims.length ? `<a class="iconbtn" href="#/sims">Interactive simulations</a>` : ""}
         </div>
         <p class="note">${num(idx.entries.length)} entries, ${num(idx.words)} words.
         Each entry is fetched only when you open it, so the site stays quick on a phone.</p>
@@ -404,6 +413,11 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
         <h1>${highlight(body.t, terms)}</h1>
         <p class="credit">${esc(index.title)}${index.year ? `, ${esc(index.year)}` : ""} —
           entry ${num(at + 1)} of ${num(index.entries.length)}, ${num(row[5])} words</p>
+        ${simsFor(bookId, entryId).map((sim) => `
+          <a class="sim-callout" href="#/sims/${esc(sim.id)}">
+            <strong>Try the simulation: ${esc(sim.title)}</strong>
+            <span>${esc(sim.summary)}</span>
+          </a>`).join("")}
         ${html}
         <nav class="entry-foot">
           ${prev ? `<a href="#/${esc(bookId)}/${esc(prev[0])}">Previous: ${esc(prev[1])}</a>` : ""}
@@ -474,10 +488,138 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
     setTitle([`${query} — search`]);
   }
 
+  /* ----------------------------------------------------------- simulations */
+
+  async function loadSims() {
+    if (state.sims) return state.sims;
+    try {
+      state.sims = (await getJSON("sims/sims.json")).sims || [];
+    } catch (e) {
+      state.sims = [];
+    }
+    return state.sims;
+  }
+
+  function loadSimScript(sim) {
+    if (window.OrrerySims && OrrerySims.has(sim.id)) return Promise.resolve();
+    if (state.simScripts.has(sim.id)) return state.simScripts.get(sim.id);
+    const pr = new Promise((resolve, reject) => {
+      const el = document.createElement("script");
+      el.src = `sims/${sim.script}`;
+      el.onload = () => resolve();
+      el.onerror = () => reject(new Error(`could not load sims/${sim.script}`));
+      document.head.appendChild(el);
+    });
+    state.simScripts.set(sim.id, pr);
+    return pr;
+  }
+
+  function disposeSim() {
+    if (state.simKit) {
+      state.simKit.dispose();
+      state.simKit = null;
+    }
+  }
+
+  function simsFor(bookId, entryId) {
+    return (state.sims || []).filter((sim) =>
+      (sim.articles || []).some((a) => a.book === bookId && a.entry === entryId)
+    );
+  }
+
+  async function articleLinks(sim) {
+    const links = [];
+    for (const a of sim.articles || []) {
+      let idx;
+      try { idx = await loadIndex(a.book); } catch (e) { continue; }
+      const at = idx.byId.get(a.entry);
+      if (at === undefined) continue;
+      links.push({ href: `#/${a.book}/${a.entry}`, title: idx.entries[at][1], book: idx.title });
+    }
+    return links;
+  }
+
+  async function viewSims() {
+    const sims = await loadSims();
+    if (!sims.length) {
+      dom.view.innerHTML = `<div class="home"><h1>No simulations yet</h1>
+        <p class="note">Add one to <code>docs/sims/</code> and list it in <code>docs/sims/sims.json</code>.</p></div>`;
+      return;
+    }
+    const rows = [];
+    for (const [i, sim] of sims.entries()) {
+      const links = await articleLinks(sim);
+      rows.push(`
+        <li>
+          <span class="n">${pad(i + 1, 2)}</span>
+          <div>
+            <h2><a href="#/sims/${esc(sim.id)}">${esc(sim.title)}</a></h2>
+            <p>${esc(sim.summary)}</p>
+            ${links.length ? `<p class="linked">Read about it: ${links
+              .map((l) => `<a href="${esc(l.href)}">${esc(l.title)}</a>`)
+              .join(", ")}</p>` : ""}
+          </div>
+        </li>`);
+    }
+    dom.view.innerHTML = `
+      <div class="home sims-home">
+        <h1>Simulations</h1>
+        <p class="lede">${num(sims.length)} working models of ideas from the encyclopedia.
+        Each one runs in the page, and each links to the entries that explain it.</p>
+        <ol class="sim-list">${rows.join("")}</ol>
+      </div>`;
+    setTitle(["Simulations"]);
+  }
+
+  async function viewSim(id) {
+    const sims = await loadSims();
+    const at = sims.findIndex((sim) => sim.id === id);
+    if (at < 0) {
+      dom.view.innerHTML = `<p class="status">No simulation called <code>${esc(id)}</code>.
+        <a href="#/sims">See them all</a>.</p>`;
+      return;
+    }
+    const sim = sims[at];
+    showLoading("Starting the simulation…");
+    await loadSimScript(sim);
+    const links = await articleLinks(sim);
+    const prev = at > 0 ? sims[at - 1] : null;
+    const next = at + 1 < sims.length ? sims[at + 1] : null;
+    dom.view.innerHTML = `
+      <div class="sim-page">
+        <h1>${esc(sim.title)}</h1>
+        <p class="credit">${esc(sim.summary)}</p>
+        <div class="sim" id="simRoot"></div>
+        <div class="sim-notes">
+          <h2>How to read it</h2>
+          <p>${esc(sim.explain || "")}</p>
+          ${links.length ? `<h2>Read about it in the encyclopedia</h2>
+          <ul class="sim-articles">${links
+            .map((l) => `<li><a href="${esc(l.href)}">${esc(l.title)}</a></li>`)
+            .join("")}</ul>` : ""}
+        </div>
+        <nav class="entry-foot">
+          ${prev ? `<a href="#/sims/${esc(prev.id)}">Previous: ${esc(prev.title)}</a>` : ""}
+          ${next ? `<a href="#/sims/${esc(next.id)}">Next: ${esc(next.title)}</a>` : ""}
+          <a href="#/sims">All simulations</a>
+        </nav>
+      </div>`;
+    const mount = OrrerySims.get(sim.id);
+    if (!mount) throw new Error(`sims/${sim.script} did not register "${sim.id}"`);
+    state.simKit = OrrerySims.createKit(document.getElementById("simRoot"));
+    mount(state.simKit);
+    window.scrollTo(0, 0);
+    setTitle([sim.title, "Simulations"]);
+  }
+
   /* ---------------------------------------------------------------- routing */
 
   function parseRoute() {
     const hash = location.hash.replace(/^#\/?/, "");
+    if (hash === "sims" || hash.startsWith("sims/")) {
+      const id = decodeURIComponent(hash.slice(5));
+      return id ? { kind: "sim", id } : { kind: "sims" };
+    }
     if (hash.startsWith("search")) {
       const params = new URLSearchParams(hash.split("?")[1] || "");
       return { kind: "search", q: params.get("q") || "", scope: params.get("b") || "all" };
@@ -500,8 +642,19 @@ with you your not no can may more most been also than them we us i`.split(/\s+/)
 
   async function route() {
     const r = parseRoute();
+    disposeSim();
+    document.querySelectorAll(".topbar .simlink").forEach((a) =>
+      a.toggleAttribute("aria-current", r.kind === "sims" || r.kind === "sim")
+    );
     try {
-      if (r.kind === "search") {
+      await loadSims();
+      if (r.kind === "sims") {
+        state.terms = [];
+        await viewSims();
+      } else if (r.kind === "sim") {
+        state.terms = [];
+        await viewSim(r.id);
+      } else if (r.kind === "search") {
         await syncBook(r.scope === "all" ? state.bookId : r.scope);
         if (r.scope === "all") for (const b of state.manifest.books) await loadIndex(b.id);
         await viewSearch(r.q, r.scope);
