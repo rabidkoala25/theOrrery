@@ -463,6 +463,224 @@
           "entry": "galaxies-interactions-and-mergers"
         }
       ]
+    },
+    {
+      "id": "solar-wind-spiral",
+      "title": "The solar wind's Parker spiral",
+      "summary": "The solar wind blows straight out, but the Sun turns beneath it, so the wind and its magnetic field wind into a spiral.",
+      "explain": "Each coloured line joins wind released from one spot on the Sun, like water from a spinning garden sprinkler. At Earth the spiral crosses at about 45° for typical wind speeds; faster wind straightens it, a faster-spinning star winds it tighter. This is the kinematic picture Eugene Parker worked out in 1958; real wind also has fast and slow streams that collide.",
+      "script": "solar-wind-spiral.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "solar-wind"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "solar-wind-global-properties"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "solar-wind-corotating-interaction-regions"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "parker-eugene-gene-newman-1927"
+        }
+      ]
+    },
+    {
+      "id": "telescope-resolution",
+      "title": "Telescope resolution and the Airy disc",
+      "summary": "Light through a round aperture spreads into a bright disc and rings, which sets how close two stars can be and still be told apart.",
+      "explain": "The image is computed from the Airy pattern of each star. When the separation equals 1.22 times wavelength over aperture, the Rayleigh limit, one star's peak sits on the other's first dark ring and a dip appears between them. Bigger telescopes and shorter wavelengths resolve finer detail. On the ground, air turbulence usually blurs everything to about half an arcsecond unless adaptive optics corrects it.",
+      "script": "telescope-resolution.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "airy-disk"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "diffraction"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "rayleigh-limit"
+        }
+      ]
+    },
+    {
+      "id": "precession",
+      "title": "Precession and the changing pole star",
+      "summary": "Earth's axis wobbles like a spinning top's, circling the sky every 25,800 years and changing which star marks the north.",
+      "explain": "The chart is centred on the pole of Earth's orbit, which stays put, and the red cross marks where the spin axis points in the chosen year. Around 2800 BC the pole was near Thuban in Draco; Polaris is closest around AD 2100; Vega takes over near AD 14,000. Stars are placed at their J2000 positions, ignoring their own slow motions.",
+      "script": "precession.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "precession"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "polaris"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "vega"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "obliquity-of-the-ecliptic"
+        }
+      ]
+    },
+    {
+      "id": "kirkwood-gaps",
+      "title": "Kirkwood gaps and orbital resonance",
+      "summary": "Asteroids whose periods are simple fractions of Jupiter's get tugged at the same places again and again, and many have been cleared away.",
+      "explain": "Red dots mark where the asteroid has lined up with Jupiter. At a resonance they land on the same few spots, so Jupiter's pulls add up; elsewhere they spread evenly and cancel. The histogram is a smooth stand-in for the real belt, with gaps at the 4:1, 3:1, 5:2, 7:3 and 2:1 resonances. The 3:2 resonance is the exception: there the geometry protects the Hilda asteroids instead.",
+      "script": "kirkwood-gaps.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "kirkwood-gaps"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "resonance"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "asteroid-belt"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "asteroids"
+        }
+      ]
+    },
+    {
+      "id": "black-hole",
+      "title": "Light around a black hole",
+      "summary": "Rays of light bend around a black hole; some loop around it, and any aimed too close fall in.",
+      "explain": "Every path is integrated from the equations for light in Schwarzschild spacetime, drawn in units of the event-horizon radius, so the picture is the same for any mass. Light can orbit at 1.5 horizon radii, the photon sphere, and every ray aimed within about 2.6 radii is captured. That is the dark 'shadow' the Event Horizon Telescope photographed around M87* and Sagittarius A*. Aim the followed ray just outside 2.598 to watch it loop.",
+      "script": "black-hole.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "black-hole"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "schwarzschild-karl-1873-1916"
+        }
+      ]
+    },
+    {
+      "id": "launch-window",
+      "title": "Launch windows and transfer orbits",
+      "summary": "The cheapest way to another planet is half an ellipse, and it only works when the planets are lined up.",
+      "explain": "A Hohmann transfer touches Earth's orbit at one end and the target's at the other. Launch when the target is the right angle ahead of Earth, 44° for Mars, and it arrives just as the spacecraft does; launch at any other time and you miss. The planets start where they are today. The radiation estimate uses the 1.8 mSv per day measured inside the Curiosity rover's cruise capsule on the way to Mars.",
+      "script": "launch-window.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "synodic-period"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "sidereal-period"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "mars"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "orbit"
+        }
+      ]
+    },
+    {
+      "id": "roche-rings",
+      "title": "The Roche limit and planetary rings",
+      "summary": "A moon that strays too close to its planet is pulled apart by tides and spreads into a ring.",
+      "explain": "Inside the Roche limit the difference in the planet's pull across a moon beats the moon's own gravity. The moon here is a loose pile of rubble; once inside, each piece follows its own orbit, and the inner ones outpace the outer ones until they form a ring. The limit uses the fluid-body formula, 2.44 planet radii times the cube root of the density ratio, so an icy moon around Saturn breaks up at about the outer edge of the real rings.",
+      "script": "roche-rings.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "roche-limit"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "planetary-rings"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "saturn-rings"
+        }
+      ]
+    },
+    {
+      "id": "white-dwarf",
+      "title": "White dwarfs and the Chandrasekhar limit",
+      "summary": "Add mass to a white dwarf and it shrinks, until at about 1.44 Suns it can no longer hold itself up.",
+      "explain": "White dwarfs are held up by electron degeneracy pressure, a quantum effect, not by heat. The curve is Nauenberg's fit to Chandrasekhar's mass–radius relation, with three measured white dwarfs for comparison. Past the limit the star collapses to a neutron star or explodes as a type Ia supernova. Earth is drawn to the same scale.",
+      "script": "white-dwarf.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "white-dwarfs"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "chandrasekhar-subrahmanyan-1910-95"
+        }
+      ]
+    },
+    {
+      "id": "cosmic-fate",
+      "title": "The shape and fate of the universe",
+      "summary": "Matter slows the expansion and dark energy speeds it up; the mix sets the universe's age, shape and future.",
+      "explain": "The curve comes from integrating the Friedmann equation from today's size backwards to the Big Bang and forwards into the future; radiation is left out, which barely changes the answer. Densities are given as fractions of the critical density. The map shows every combination: grey universes never had a Big Bang, red ones recollapse, and the solid line marks flat ones like ours.",
+      "script": "cosmic-fate.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "cosmology-standard-model"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "the-cosmological-constant-and-its-interpretation"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "cosmological-model"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "expanding-universe"
+        }
+      ]
+    },
+    {
+      "id": "gravitational-waves",
+      "title": "Gravitational waves: the chirp of a merger",
+      "summary": "Two black holes or neutron stars spiral together, sending out ripples in spacetime that rise in pitch and strength until they merge.",
+      "explain": "The inspiral follows the leading-order formula from general relativity for how fast the orbit shrinks; the merger and ringdown are a simple stand-in for what full simulations give. For pairs like these the wave frequencies are audio frequencies, so the chirp button plays the waveform itself, not a translation of it. Binary pulsars first showed orbits shrinking at exactly the rate this radiation predicts.",
+      "script": "gravitational-waves.js",
+      "articles": [
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "gravitational-waves"
+        },
+        {
+          "book": "astronomy-astrophysics",
+          "entry": "general-relativity-tests-binary-pulsars"
+        }
+      ]
     }
   ]
 }
